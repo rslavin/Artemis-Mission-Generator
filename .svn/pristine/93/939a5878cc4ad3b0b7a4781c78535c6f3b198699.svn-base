@@ -1,0 +1,17 @@
+package mission.event.conditions;
+
+import mission.event.Condition;
+
+public class CObjectProperty extends Condition {
+
+	
+	public CObjectProperty(Object src, String prop, String cmp, Object val) {
+		super("if_object_property");
+		
+		put("name", src);
+		put("property", prop); // TODO check this, the doc says "name"
+		put("cmp", cmp);
+		put("value", val);
+	}
+	
+}
